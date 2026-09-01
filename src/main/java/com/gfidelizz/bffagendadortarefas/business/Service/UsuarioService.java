@@ -1,4 +1,4 @@
-package com.gfidelizz.bffagendadortarefas.business;
+package com.gfidelizz.bffagendadortarefas.business.Service;
 
 
 import com.gfidelizz.bffagendadortarefas.business.dto.in.EnderecoDTORequest;

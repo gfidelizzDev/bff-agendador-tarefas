@@ -1,7 +1,7 @@
 package com.gfidelizz.bffagendadortarefas.controller;
 
 
-import com.gfidelizz.bffagendadortarefas.business.UsuarioService;
+import com.gfidelizz.bffagendadortarefas.business.Service.UsuarioService;
 import com.gfidelizz.bffagendadortarefas.business.dto.in.EnderecoDTORequest;
 import com.gfidelizz.bffagendadortarefas.business.dto.in.LoginRequestDTO;
 import com.gfidelizz.bffagendadortarefas.business.dto.in.TelefoneDTORequest;

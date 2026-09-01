@@ -1,7 +1,7 @@
 package com.gfidelizz.bffagendadortarefas.controller;
 
 
-import com.gfidelizz.bffagendadortarefas.business.TarefasService;
+import com.gfidelizz.bffagendadortarefas.business.Service.TarefasService;
 import com.gfidelizz.bffagendadortarefas.business.dto.in.TarefasDTORequest;
 import com.gfidelizz.bffagendadortarefas.business.dto.out.TarefasDTOResponse;
 import com.gfidelizz.bffagendadortarefas.business.enums.StatusNotificacaoEnum;
