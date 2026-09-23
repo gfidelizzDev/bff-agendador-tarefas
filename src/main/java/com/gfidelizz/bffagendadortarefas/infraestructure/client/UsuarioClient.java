@@ -1,4 +1,4 @@
-package com.gfidelizz.bffagendadortarefas.infraestructure.Client;
+package com.gfidelizz.bffagendadortarefas.infraestructure.client;
 
 import com.gfidelizz.bffagendadortarefas.business.dto.in.EnderecoDTORequest;
 import com.gfidelizz.bffagendadortarefas.business.dto.in.LoginRequestDTO;

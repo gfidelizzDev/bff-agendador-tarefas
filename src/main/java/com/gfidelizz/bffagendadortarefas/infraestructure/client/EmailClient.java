@@ -1,4 +1,4 @@
-package com.gfidelizz.bffagendadortarefas.infraestructure.Client;
+package com.gfidelizz.bffagendadortarefas.infraestructure.client;
 
 import com.gfidelizz.bffagendadortarefas.business.dto.out.TarefasDTOResponse;
 import org.springframework.cloud.openfeign.FeignClient;

@@ -2,7 +2,7 @@ package com.gfidelizz.bffagendadortarefas.business.Service;
 
 
 import com.gfidelizz.bffagendadortarefas.business.dto.out.TarefasDTOResponse;
-import com.gfidelizz.bffagendadortarefas.infraestructure.Client.EmailClient;
+import com.gfidelizz.bffagendadortarefas.infraestructure.client.EmailClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

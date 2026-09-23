@@ -4,7 +4,7 @@ package com.gfidelizz.bffagendadortarefas.business.Service;
 import com.gfidelizz.bffagendadortarefas.business.dto.in.TarefasDTORequest;
 import com.gfidelizz.bffagendadortarefas.business.dto.out.TarefasDTOResponse;
 import com.gfidelizz.bffagendadortarefas.business.enums.StatusNotificacaoEnum;
-import com.gfidelizz.bffagendadortarefas.infraestructure.Client.TarefasClient;
+import com.gfidelizz.bffagendadortarefas.infraestructure.client.TarefasClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
