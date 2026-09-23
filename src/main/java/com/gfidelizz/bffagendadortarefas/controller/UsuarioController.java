@@ -9,6 +9,7 @@ import com.gfidelizz.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.gfidelizz.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
 import com.gfidelizz.bffagendadortarefas.business.dto.out.TelefoneDTOResponse;
 import com.gfidelizz.bffagendadortarefas.business.dto.out.UsuarioDTOResponse;
+import com.gfidelizz.bffagendadortarefas.business.dto.out.ViaCepDTOResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -41,8 +42,8 @@ public class UsuarioController {
     @ApiResponse(responseCode = "200", description = "Usuário logado com sucesso")
     @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
     @ApiResponse(responseCode = "500", description = "Erro de servidor")
-    public String login (@RequestBody LoginRequestDTO loginRequestDTO) {
-        return usuarioService.loginUsuario (loginRequestDTO);
+    public String login(@RequestBody LoginRequestDTO loginRequestDTO) {
+        return usuarioService.loginUsuario(loginRequestDTO);
     }
 
     @GetMapping
@@ -53,7 +54,7 @@ public class UsuarioController {
     @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
 
     public ResponseEntity<UsuarioDTOResponse> buscaUsuarioPorEmail(@RequestParam("email") String email,
-                                                                  @RequestHeader("Authorization") String token) {
+                                                                   @RequestHeader("Authorization") String token) {
         return ResponseEntity.ok(usuarioService.buscarUsuarioPorEmail(email, token));
     }
 
@@ -90,8 +91,8 @@ public class UsuarioController {
     @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
 
     public ResponseEntity<EnderecoDTOResponse> atualizaEndereco(@RequestBody EnderecoDTORequest dto,
-                                                               @RequestParam("id") Long id,
-                                                               @RequestHeader("Authorization") String token) {
+                                                                @RequestParam("id") Long id,
+                                                                @RequestHeader("Authorization") String token) {
         return ResponseEntity.ok(usuarioService.atualizaEndereco(id, dto, token));
     }
 
@@ -103,8 +104,8 @@ public class UsuarioController {
     @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
 
     public ResponseEntity<TelefoneDTOResponse> atualizaTelefone(@RequestBody TelefoneDTORequest dto,
-                                                                                 @RequestParam("id") Long id,
-                                                                                 @RequestHeader("Authorization") String token) {
+                                                                @RequestParam("id") Long id,
+                                                                @RequestHeader("Authorization") String token) {
         return ResponseEntity.ok(usuarioService.atualizaTelefone(id, dto, token));
     }
 
@@ -132,4 +133,13 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioService.cadastraTelefone(token, dto));
     }
 
+    @GetMapping("/endereco/{cep}")
+    @Operation(summary = "Buscar dados de endereço por cep", description = "Busca dados de um certo endereço recebendo o cep")
+    @ApiResponse(responseCode = "200", description = "Endereço encontrado com sucesso!")
+    @ApiResponse(responseCode = "400", description = "cep inválido")
+    @ApiResponse(responseCode = "500", description = "Erro de servidor")
+
+    public ResponseEntity<ViaCepDTOResponse> buscaEnderecoCep(@PathVariable("cep") String cep) {
+        return ResponseEntity.ok(usuarioService.buscarEnderecoCep(cep));
+    }
 }
